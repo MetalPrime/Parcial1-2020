@@ -26,6 +26,7 @@ public class Main extends PApplet{
 			controller.listNetflix().get(i).paint(i * 100, 150);
 		}
 		
+		
 		text("Press L to sort and save by Rating ", 100, 500);
 		text("Press N to sort and save by Name ", 100, 525);
 		text("Press D to sort and save by Date ", 100, 550);
