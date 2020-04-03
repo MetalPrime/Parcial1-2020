@@ -11,6 +11,8 @@ public class Netflix implements Comparable<Netflix>{
 	private String name;
 	private int rating;
 	private String type;
+	private int x;
+	private int y;
 	
 
 	public Netflix(PImage img, String name, int date, int rating, String type, PApplet app) {
@@ -22,8 +24,10 @@ public class Netflix implements Comparable<Netflix>{
 		this.type = type;
 	}
 
-	public void paint() {
-		app.image(img, a, b);
+	public void paint(int x, int y) {
+		this.x = x;
+		this.y = y;
+		app.image(img, x, y);
 		
 	}
 

@@ -35,7 +35,7 @@ public class Logic {
 			
 			
 			for(int j=0; j<takeMovies[0].length(); j++) {
-				imgName= takeMovies[0].toLowerCase().split(" ").toString();
+			//	imgName= takeMovies[0].toLowerCase().split(" ").toString();
 				System.out.println(imgName);
 			}
 			
@@ -65,6 +65,20 @@ public class Logic {
 
 		}
 		
+	}
+
+	/**
+	 * @return the list
+	 */
+	public LinkedList<Netflix> getList() {
+		return list;
+	}
+
+	/**
+	 * @param list the list to set
+	 */
+	public void setList(LinkedList<Netflix> list) {
+		this.list = list;
 	}
 
 	

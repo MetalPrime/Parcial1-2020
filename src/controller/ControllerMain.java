@@ -1,6 +1,9 @@
 package controller;
 
+import java.util.LinkedList;
+
 import model.Logic;
+import model.Netflix;
 import processing.core.PApplet;
 
 public class ControllerMain {
@@ -11,6 +14,15 @@ public class ControllerMain {
 	public ControllerMain(PApplet app) {
 		this.app = app;
 		logic = new Logic(app);
+	}
+	
+	public void selectChar(char c) {
+		logic.sortList(c);
+	}
+	
+	public LinkedList<Netflix> listNetflix(){
+		return logic.getList();
+		
 	}
 	
 	
