@@ -21,6 +21,8 @@ public class Logic {
 	private SortName sName;
 	private SortType sType;
 	private SortDate sDate;
+	private String[] saveRating, saveName, saveDate, saveType; 
+	
 	
 
 	public Logic(PApplet app) {
@@ -31,6 +33,11 @@ public class Logic {
 		sName = new SortName();
 		sType = new SortType();
 		sDate = new SortDate();
+		
+		saveDate = new String[6];
+		saveName = new String[6];
+		saveRating = new String[6];
+		saveType = new String[6];
 		
 		for(int i=0; i<infoMovies.length; i++) {
 			takeMovies = infoMovies[i].split(",");
@@ -52,17 +59,69 @@ public class Logic {
 	
 	public void sortList(char c) {
 		switch (c) { 
-		case 'L':
+		case 'l':
 				Collections.sort(list);
+				for (int i = 0; i < list.size(); i++) {
+
+					String name = list.get(i).getName();
+					String date = Integer.toString(list.get(i).getDate());
+					String rating = Integer.toString(list.get(i).getRating());
+					String type = list.get(i).getType();
+					
+					String element = name + "," + date + "," + rating + "," + type ;
+
+					saveRating[i] = element;
+
+					app.saveStrings(app.dataPath("Rating.txt"), saveRating);
+				}
 			break;
 		case 'n':
 				Collections.sort(list,sName);
+				for (int i = 0; i < list.size(); i++) {
+
+					String name = list.get(i).getName();
+					String date = Integer.toString(list.get(i).getDate());
+					String rating = Integer.toString(list.get(i).getRating());
+					String type = list.get(i).getType();
+					
+					String element = name + "," + date + "," + rating + "," + type ;
+
+					saveName[i] = element;
+
+					app.saveStrings(app.dataPath("Name.txt"), saveName);
+				}
 			break;
 		case 'd':
 				Collections.sort(list,sDate);
+				for (int i = 0; i < list.size(); i++) {
+
+					String name = list.get(i).getName();
+					String date = Integer.toString(list.get(i).getDate());
+					String rating = Integer.toString(list.get(i).getRating());
+					String type = list.get(i).getType();
+					
+					String element = name + "," + date + "," + rating + "," + type ;
+
+					saveDate[i] = element;
+
+					app.saveStrings(app.dataPath("Date.txt"), saveDate);
+				}
 			break;
 		case 't':
 			Collections.sort(list,sType);
+			for (int i = 0; i < list.size(); i++) {
+
+				String name = list.get(i).getName();
+				String date = Integer.toString(list.get(i).getDate());
+				String rating = Integer.toString(list.get(i).getRating());
+				String type = list.get(i).getType();
+				
+				String element = name + "," + date + "," + rating + "," + type ;
+
+				saveType[i] = element;
+
+				app.saveStrings(app.dataPath("Type.txt"), saveType);
+			}
 		break;
 
 		}
