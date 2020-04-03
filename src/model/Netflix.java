@@ -140,11 +140,11 @@ public class Netflix implements Comparable<Netflix>{
 		this.x = x;
 		this.y = y;
 		app.fill(255);
-		//app.image(img, x, y);
-		app.text(name,x,y+50);
-		app.text(date,x,y+75);
-		app.text(rating + "%", x, y+100);
-		app.text(type, x, y+125);
+		app.image(img, x, y,50,100);
+		app.text(name,x,y+125);
+		app.text(date,x,y+150);
+		app.text(rating + "%", x, y+175);
+		app.text(type, x, y+200);
 		
 	}
 

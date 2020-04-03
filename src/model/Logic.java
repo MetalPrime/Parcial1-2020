@@ -37,7 +37,7 @@ public class Logic {
 			
 			
 	
-			imgName= takeMovies[0].toLowerCase();
+			imgName= takeMovies[0].toLowerCase().replaceAll("\\s", "");
 			
 			img = app.loadImage("./../dataImages/"+ imgName + ".jpg");
 			
@@ -46,7 +46,7 @@ public class Logic {
 			rating = Integer.parseInt(takeMovies[2]);
 			type = takeMovies[3];
 			
-			list.add(new Netflix(null, name, date, rating, type,app));
+			list.add(new Netflix(img, name, date, rating, type,app));
 		}
 	}
 	
