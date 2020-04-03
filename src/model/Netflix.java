@@ -27,7 +27,12 @@ public class Netflix implements Comparable<Netflix>{
 	public void paint(int x, int y) {
 		this.x = x;
 		this.y = y;
-		app.image(img, x, y);
+		app.fill(255);
+		//app.image(img, x, y);
+		app.text(name,x,y+50);
+		app.text(date,x,y+75);
+		app.text(rating + "%", x, y+100);
+		app.text(type, x, y+125);
 		
 	}
 

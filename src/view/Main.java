@@ -21,7 +21,10 @@ public class Main extends PApplet{
 	}
 	
 	public void draw() {
-		
+		background(0);
+		for(int i=0; i< controller.listNetflix().size(); i++) {
+			controller.listNetflix().get(i).paint(i * 100, 150);
+		}
 	}
 	
 	public void mousePressed() {
@@ -29,7 +32,7 @@ public class Main extends PApplet{
 	}
 	
 	public void keyPressed() {
-		
+		controller.selectChar(key);
 	}
 
 }
