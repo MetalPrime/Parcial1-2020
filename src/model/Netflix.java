@@ -24,6 +24,118 @@ public class Netflix implements Comparable<Netflix>{
 		this.type = type;
 	}
 
+	/**
+	 * @return the app
+	 */
+	public PApplet getApp() {
+		return app;
+	}
+
+	/**
+	 * @param app the app to set
+	 */
+	public void setApp(PApplet app) {
+		this.app = app;
+	}
+
+	/**
+	 * @return the img
+	 */
+	public PImage getImg() {
+		return img;
+	}
+
+	/**
+	 * @param img the img to set
+	 */
+	public void setImg(PImage img) {
+		this.img = img;
+	}
+
+	/**
+	 * @return the date
+	 */
+	public int getDate() {
+		return date;
+	}
+
+	/**
+	 * @param date the date to set
+	 */
+	public void setDate(int date) {
+		this.date = date;
+	}
+
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * @return the rating
+	 */
+	public int getRating() {
+		return rating;
+	}
+
+	/**
+	 * @param rating the rating to set
+	 */
+	public void setRating(int rating) {
+		this.rating = rating;
+	}
+
+	/**
+	 * @return the type
+	 */
+	public String getType() {
+		return type;
+	}
+
+	/**
+	 * @param type the type to set
+	 */
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	/**
+	 * @return the x
+	 */
+	public int getX() {
+		return x;
+	}
+
+	/**
+	 * @param x the x to set
+	 */
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	/**
+	 * @return the y
+	 */
+	public int getY() {
+		return y;
+	}
+
+	/**
+	 * @param y the y to set
+	 */
+	public void setY(int y) {
+		this.y = y;
+	}
+
 	public void paint(int x, int y) {
 		this.x = x;
 		this.y = y;
@@ -39,7 +151,7 @@ public class Netflix implements Comparable<Netflix>{
 	@Override
 	public int compareTo(Netflix o) {
 		// TODO Auto-generated method stub
-		return 0;
+		return this.rating-o.rating;
 	}
 
 }

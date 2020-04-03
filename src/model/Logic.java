@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 
 import processing.core.PApplet;
+import processing.core.PImage;
 
 public class Logic {
 
@@ -12,6 +13,7 @@ public class Logic {
 	private String[] takeMovies;
 	private LinkedList <Netflix> list;
 	private String imgName;
+	private PImage img;
 	private String name;
 	private int date;
 	private int rating;
@@ -19,6 +21,7 @@ public class Logic {
 	private SortName sName;
 	private SortType sType;
 	private SortDate sDate;
+	
 
 	public Logic(PApplet app) {
 		// TODO Auto-generated constructor stub
@@ -33,11 +36,10 @@ public class Logic {
 			takeMovies = infoMovies[i].split(",");
 			
 			
+	
+			imgName= takeMovies[0].toLowerCase();
 			
-			for(int j=0; j<takeMovies[0].length(); j++) {
-			//	imgName= takeMovies[0].toLowerCase().split(" ").toString();
-				System.out.println(imgName);
-			}
+			img = app.loadImage("./../dataImages/"+ imgName + ".jpg");
 			
 			name = takeMovies[0];
 			date = Integer.parseInt(takeMovies[1]);
