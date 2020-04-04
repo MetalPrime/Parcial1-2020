@@ -72,7 +72,7 @@ public class Logic {
 
 					saveRating[i] = element;
 
-					app.saveStrings(app.dataPath("Rating.txt"), saveRating);
+					app.saveStrings("Rating.txt", saveRating);
 				}
 			break;
 		case 'n':
@@ -88,7 +88,7 @@ public class Logic {
 
 					saveName[i] = element;
 
-					app.saveStrings(app.dataPath("Name.txt"), saveName);
+					app.saveStrings("Name.txt", saveName);
 				}
 			break;
 		case 'd':
@@ -104,7 +104,7 @@ public class Logic {
 
 					saveDate[i] = element;
 
-					app.saveStrings(app.dataPath("Date.txt"), saveDate);
+					app.saveStrings("Date.txt", saveDate);
 				}
 			break;
 		case 't':
@@ -120,7 +120,7 @@ public class Logic {
 
 				saveType[i] = element;
 
-				app.saveStrings(app.dataPath("Type.txt"), saveType);
+				app.saveStrings("Type.txt", saveType);
 			}
 		break;
 
